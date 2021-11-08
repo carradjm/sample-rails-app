@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_08_200000) do
+ActiveRecord::Schema.define(version: 2021_11_08_200850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,12 +24,12 @@ ActiveRecord::Schema.define(version: 2021_11_08_200000) do
 
   create_table "ledger_entries", force: :cascade do |t|
     t.integer "amount"
-    t.integer "patient_id"
     t.datetime "date"
     t.string "performed_by"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "transaction_code_id"
+    t.integer "account_id"
   end
 
   create_table "patients", force: :cascade do |t|

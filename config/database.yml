@@ -23,7 +23,6 @@ default: &default
 
 development:
   <<: *default
-  host: db
   username: postgres
   password: postgres
   database: sample_app_development

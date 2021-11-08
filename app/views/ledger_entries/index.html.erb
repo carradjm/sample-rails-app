@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ledger Entries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cdt code</th>
+      <th>Amount</th>
+      <th>Patient</th>
+      <th>Date</th>
+      <th>Performed by</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ledger_entries.each do |ledger_entry| %>
+      <tr>
+        <td><%= ledger_entry.cdt_code %></td>
+        <td><%= ledger_entry.amount %></td>
+        <td><%= ledger_entry.patient_id %></td>
+        <td><%= ledger_entry.date %></td>
+        <td><%= ledger_entry.performed_by %></td>
+        <td><%= link_to 'Show', ledger_entry %></td>
+        <td><%= link_to 'Edit', edit_ledger_entry_path(ledger_entry) %></td>
+        <td><%= link_to 'Destroy', ledger_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ledger Entry', new_ledger_entry_path %>

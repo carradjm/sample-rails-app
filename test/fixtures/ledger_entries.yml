@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cdt_code: 1
+  amount: 1
+  patient_id: 1
+  date: 2021-11-08 13:25:26
+  performed_by: MyString
+
+two:
+  cdt_code: 1
+  amount: 1
+  patient_id: 1
+  date: 2021-11-08 13:25:26
+  performed_by: MyString

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cdt code:</strong>
+  <%= @ledger_entry.cdt_code %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @ledger_entry.amount %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @ledger_entry.patient_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @ledger_entry.date %>
+</p>
+
+<p>
+  <strong>Performed by:</strong>
+  <%= @ledger_entry.performed_by %>
+</p>
+
+<%= link_to 'Edit', edit_ledger_entry_path(@ledger_entry) %> |
+<%= link_to 'Back', ledger_entries_path %>

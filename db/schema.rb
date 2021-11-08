@@ -10,10 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_08_030436) do
+ActiveRecord::Schema.define(version: 2021_11_08_200000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accounts", force: :cascade do |t|
+    t.integer "patient_id"
+    t.integer "balance", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "ledger_entries", force: :cascade do |t|
+    t.integer "amount"
+    t.integer "patient_id"
+    t.datetime "date"
+    t.string "performed_by"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "transaction_code_id"
+  end
 
   create_table "patients", force: :cascade do |t|
     t.string "first_name"

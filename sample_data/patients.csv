@@ -1,4 +1,4 @@
-Patient ID,First Name,Last Name,Gender,Age,Email,Phone
+patient_id,first_name,last_name,gender,age,email,phone
 1,Kelsey,Perkins,Female,18,k.perkins@randatmail.com,300-348-0492
 2,Adelaide,Miller,Female,28,a.miller@randatmail.com,703-955-3536
 3,Mike,Kelly,Male,28,m.kelly@randatmail.com,728-062-2242

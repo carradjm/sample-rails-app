@@ -44,4 +44,12 @@ ActiveRecord::Schema.define(version: 2021_11_08_200000) do
     t.index ["last_name", "first_name"], name: "index_patients_on_last_name_and_first_name"
   end
 
+  create_table "transaction_codes", force: :cascade do |t|
+    t.string "entry_type"
+    t.string "title"
+    t.integer "cdt_code"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 end

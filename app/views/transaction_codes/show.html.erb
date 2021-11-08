@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Entry type:</strong>
+  <%= @transaction_code.entry_type %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @transaction_code.title %>
+</p>
+
+<p>
+  <strong>Cdt code:</strong>
+  <%= @transaction_code.cdt_code %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @transaction_code.description %>
+</p>
+
+<%= link_to 'Edit', edit_transaction_code_path(@transaction_code) %> |
+<%= link_to 'Back', transaction_codes_path %>

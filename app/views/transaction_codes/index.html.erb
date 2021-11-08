@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Transaction Codes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Entry type</th>
+      <th>Title</th>
+      <th>Cdt code</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transaction_codes.each do |transaction_code| %>
+      <tr>
+        <td><%= transaction_code.entry_type %></td>
+        <td><%= transaction_code.title %></td>
+        <td><%= transaction_code.cdt_code %></td>
+        <td><%= transaction_code.description %></td>
+        <td><%= link_to 'Show', transaction_code %></td>
+        <td><%= link_to 'Edit', edit_transaction_code_path(transaction_code) %></td>
+        <td><%= link_to 'Destroy', transaction_code, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transaction Code', new_transaction_code_path %>

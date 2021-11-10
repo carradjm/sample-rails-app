@@ -1,0 +1,4 @@
+<td><%= account.patient_full_name %></td>
+<td><%= number_to_currency(account.balance / 100) %></td>
+<td><%= account.phone %></td>
+<td><%= account.latest_transaction_date.strftime("%m/%d/%Y %I:%M%p")%></td>

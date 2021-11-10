@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :accounts
+  resources :accounts, path: "/"
   resources :ledger_entries
   resources :transaction_codes
   resources :patients

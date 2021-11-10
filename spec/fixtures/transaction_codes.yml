@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  entry_type: Procedure
+  title: Procedure 1
+  cdt_code: 170
+  description: Description
+
+two:
+  entry_type: Payment
+  title: Payment 1
+  cdt_code: 3
+  description: Description
+
+three:
+  entry_type: Procedure
+  title: Procedure 3
+  cdt_code: 190
+  description: Description
+
+four:
+  entry_type: Payment
+  title: Payment 4
+  cdt_code: 5
+  description: Description
+
+five:
+  entry_type: Procedure
+  title: Procedure 5
+  cdt_code: 191
+  description: Description
+
+six:
+  entry_type: Procedure
+  title: Procedure 6
+  cdt_code: 210
+  description: Description

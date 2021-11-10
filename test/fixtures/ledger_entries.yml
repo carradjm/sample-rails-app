@@ -1,15 +1,45 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  cdt_code: 1
+  transaction_code_id: 120
   amount: 1
-  patient_id: 1
+  account_id: 1
   date: 2021-11-08 13:25:26
   performed_by: MyString
 
 two:
-  cdt_code: 1
-  amount: 1
-  patient_id: 1
+  transaction_code_id: 6
+  amount: -2
+  account_id: 2
   date: 2021-11-08 13:25:26
   performed_by: MyString
+
+three:
+  transaction_code_id: 140
+  amount: 3
+  account_id: 1
+  date: 2021-11-08 13:25:26
+  performed_by: MyString
+
+four:
+  transaction_code_id: 5
+  amount: -4
+  account_id: 2
+  date: 2021-11-08 13:25:26
+  performed_by: MyString
+
+five:
+  transaction_code_id: 8670
+  amount: 5
+  account_id: 1
+  date: 2021-11-08 13:25:26
+  performed_by: MyString
+
+
+six:
+  transaction_code_id: 8681
+  amount: 6
+  account_id: 2
+  date: 2021-11-08 13:25:26
+  performed_by: MyString
+

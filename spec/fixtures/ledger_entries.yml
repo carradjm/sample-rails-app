@@ -1,0 +1,44 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  transaction_code: one
+  amount: 1
+  account: one
+  date: 2021-11-08 13:25:26
+  performed_by: Doctor
+
+two:
+  transaction_code: two
+  amount: -2
+  account: two
+  date: 2021-11-08 13:25:26
+  performed_by: Doctor
+
+three:
+  transaction_code: three
+  amount: 3
+  account: one
+  date: 2021-11-08 13:25:26
+  performed_by: Doctor
+
+four:
+  transaction_code: four
+  amount: -4
+  account: two
+  date: 2021-11-08 13:25:26
+  performed_by: Doctor
+
+five:
+  transaction_code: five
+  amount: 5
+  account: one
+  date: 2021-11-08 13:25:26
+  performed_by: Doctor
+
+six:
+  transaction_code: six
+  amount: 6
+  account: two
+  date: 2021-11-08 13:25:26
+  performed_by: Doctor
+

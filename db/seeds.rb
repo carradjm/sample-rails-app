@@ -38,21 +38,21 @@ CSV.foreach(Rails.root.join('sample_data/transactions.csv'), headers: true) do |
   patient_id = row["patient_id"]
   account = Patient.find(patient_id).account
   cdt_code = row["cdt_code"].to_i
-  transaction_code = TransactionCode.find_by(cdt_code: cdt_code) || TransactionCode.new
+  transaction_code = TransactionCode.find_by(cdt_code: cdt_code)
+  p transaction_code
 
   # Storing the amount as a multiple of 100 helps us avoid floating point errors
   amount = row["amount"].to_f * 100
 
+  p cdt_code
   # We indicate a payment from a patient with a negative amount
   if transaction_code.is_credit?
     amount = amount * -1.0
   end
 
-  transaction_code_id = !!transaction_code ? transaction_code.id : 0
-
   ledger_entry = LedgerEntry.create!({
     account_id: account.id,
-    transaction_code_id: transaction_code_id,
+    transaction_code_id: transaction_code.id,
     amount: amount,
     date: row["date"],
     performed_by: row["performed_by"]

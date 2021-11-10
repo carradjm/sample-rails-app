@@ -6,53 +6,32 @@ class LedgerEntriesController < ApplicationController
     @ledger_entries = LedgerEntry.all
   end
 
-  # GET /ledger_entries/1 or /ledger_entries/1.json
-  def show
-  end
-
   # GET /ledger_entries/new
   def new
     @ledger_entry = LedgerEntry.new
   end
 
-  # GET /ledger_entries/1/edit
-  def edit
-  end
-
   # POST /ledger_entries or /ledger_entries.json
   def create
-    @ledger_entry = LedgerEntry.new(ledger_entry_params)
+    account = Account.find_by(patient_id: ledger_entry_params[:patient_id])
+    transaction_code = TransactionCode.find_by(cdt_code: ledger_entry_params[:cdt_code])
+
+    @ledger_entry = LedgerEntry.new({
+      amount: ledger_entry_params[:amount],
+      account: account,
+      date: ledger_entry_params[:date],
+      performed_by: ledger_entry_params[:performed_by],
+      transaction_code: transaction_code
+    })
 
     respond_to do |format|
       if @ledger_entry.save
-        format.html { redirect_to @ledger_entry, notice: "Ledger entry was successfully created." }
+        format.html { redirect_to controller: :accounts, action: :index  }
         format.json { render :show, status: :created, location: @ledger_entry }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @ledger_entry.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # PATCH/PUT /ledger_entries/1 or /ledger_entries/1.json
-  def update
-    respond_to do |format|
-      if @ledger_entry.update(ledger_entry_params)
-        format.html { redirect_to @ledger_entry, notice: "Ledger entry was successfully updated." }
-        format.json { render :show, status: :ok, location: @ledger_entry }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @ledger_entry.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /ledger_entries/1 or /ledger_entries/1.json
-  def destroy
-    @ledger_entry.destroy
-    respond_to do |format|
-      format.html { redirect_to ledger_entries_url, notice: "Ledger entry was successfully destroyed." }
-      format.json { head :no_content }
     end
   end
 

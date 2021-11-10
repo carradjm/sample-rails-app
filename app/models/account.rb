@@ -16,10 +16,6 @@ class Account < ApplicationRecord
     	return balance
 	end
 
-	def balance_in_dollars
-		balance / 100.0
-	end
-
 	def latest_transaction_date
 		ledger_entries.last.date
 	end

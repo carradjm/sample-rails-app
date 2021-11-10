@@ -1,5 +1,13 @@
 # Sample Project
 
+## Malcolm's Notes
+
+* You need both postgresql and Redis running in the background in order for the database and TurboStreams to work, respectively.
+* You may need to run `alter role postgres superuser createrole createdb replication;` inside of your postgres db instance in order to get Rails to connect.
+* Everything else should be contained in the Gemfile
+* `rake db:seed` will seed the initial databse.
+* I used Bootstrap as some basic CSS to make the page look a little nicer.
+
 ## Objective
 
 This repo is meant to be the basis for a small sample project.  The project is meant to demonstrate your approach to a semi-contrived business problem.  It is meant to take an hour or two and give a framework for demonstrating technical and problem solving skills.  Some implementation specifics are intentionally left vague to let you decide what works best.
